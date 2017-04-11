@@ -1,6 +1,36 @@
+var locations = [{
+
+    "name": "Place1 ",
+    "full_location": "1008 super way",
+    "lat": "45.67956915",
+    "lng": "-111.0323321",
+    "phone": "1-999-944-2139",
+    "website": ""
+    
+    },
+    {
+    "name": "Place2",
+    "full_location": "16 super way",
+    "lat": "45.67956915",
+    "lng": "-111.0323321",
+    "phone": "(999) 586-3281",
+    "website": "http://google.com"
+    
+    },
+    {
+    "name": "Place3",
+    "full_location": "210 super way",
+    "lat": "46.892053",
+    "lng": "-114.0191616",
+    "phone": "(999) 543-0171",
+    "website": ""
+    
+  }];
+  
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Location from './Location';
 
 class App extends Component {
   render() {
@@ -8,10 +38,10 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Map Search</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          <Location locations={locations}/>
         </p>
       </div>
     );
